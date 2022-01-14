@@ -1,3 +1,219 @@
+/* -----------------------------
+    Fonts
+------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Poppins:wght@400;500;600;700&display=swap");
+
+/* -----------------------------
+    Utilities
+-------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: tomato;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  width: 95%;
+}
+
+.button {
+  text-decoration: none;
+  color: white;
+  background-color: #e02c6d;
+  font-weight: 500;
+  padding: 10px 24px;
+  border-radius: 1000px;
+}
+
+/* -----------------------------
+    Header design
+-------------------------------- */
+#header-title {
+  width: 100%;
+  text-align: center;
+  margin: 35px 0 22px;
+  color: #3a3a3a;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* -----------------------------
+    Hero section design
+-------------------------------- */
+#hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#hero-image {
+  background-image: url(../images/circle-design.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 80%;
+  min-height: 290px;
+}
+
+#hero-image img {
+  width: 100%;
+}
+
+#hero-text h1,
+#hero-text p {
+  color: #3a3a3a;
+}
+
+#hero-text h1 {
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+#hero-text p {
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.hero-button {
+  margin-top: 20px;
+}
+
+.fas.fa-arrow-right {
+  margin-left: 8px;
+}
+
+/* -----------------------------
+    Collection section design
+-------------------------------- */
+#collection-section {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.section-title {
+  font-weight: 600;
+  color: #3a3a3a;
+  width: 100%;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+.card + .card {
+  margin-top: 15px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card-title {
+  margin: 16px 0 6px;
+  font-weight: 700;
+  color: #18191f;
+  font-size: 28px;
+}
+
+.card-price {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.card-rating {
+  margin: 10px 0;
+}
+
+.card-rating .fas.fa-star,
+.card-rating .fas.fa-star-half-alt {
+  color: #fb8200;
+}
+
+.card-rating-text {
+  color: #5e6366;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.card-info {
+  margin-top: 10px;
+  color: #787885;
+}
+
+.see-more-button {
+  margin: 32px 0 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.see-more-button a {
+  text-decoration: none;
+  color: #e02c6dde;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* -----------------------------
+    footer design
+-------------------------------- */
+footer {
+  background-color: #0a0826;
+  padding: 50px 0;
+}
+
+.footer-title,
+.footer-text {
+  text-align: center;
+  color: white;
+  margin: 0;
+}
+
+.footer-title {
+  margin-bottom: 10px;
+}
+
+.social-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-link {
+  height: 40px;
+  width: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  background-color: #26243a;
+  border-radius: 50%;
+}
+
+.social-link + .social-link {
+  margin-left: 10px;
 }

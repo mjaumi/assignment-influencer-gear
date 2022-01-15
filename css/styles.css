@@ -26,12 +26,19 @@ section {
 }
 
 .button {
+  display: inline-block;
   text-decoration: none;
   color: white;
   background-color: #e02c6d;
   font-weight: 500;
   padding: 10px 24px;
   border-radius: 1000px;
+  width: 195px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #3a3a3a;
 }
 
 /* -----------------------------
@@ -67,6 +74,23 @@ section {
 
 #hero-image img {
   width: 100%;
+}
+
+#hero-image:hover,
+#hero-image:focus {
+  animation: hero-image-animation 1s ease-in-out 1 forwards;
+}
+
+@keyframes hero-image-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #hero-text h1,
@@ -165,6 +189,7 @@ section {
 
 .see-more-button {
   margin-top: 32px;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
 }
@@ -188,10 +213,14 @@ section {
   padding: 15px;
   background-color: white;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 }
 
 .customer-image {
+  width: 50%;
   border-radius: 50%;
   border: 5px solid #e02c6d;
   overflow: hidden;
@@ -268,4 +297,151 @@ footer {
 
 .social-link + .social-link {
   margin-left: 10px;
+}
+
+/* -----------------------------
+    tablet design
+-------------------------------- */
+@media (min-width: 426px) and (max-width: 768px) {
+  #hero-image {
+    min-height: 560px;
+    width: 77%;
+  }
+
+  #cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
+
+  .card + .card {
+    margin-top: 0;
+  }
+}
+
+/* -----------------------------
+    laptop design
+-------------------------------- */
+@media (min-width: 769px) {
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 180px;
+    transition: width 0.6s ease-out;
+  }
+
+  .button:hover,
+  .button:focus {
+    width: 30%;
+  }
+
+  #header-title {
+    width: 80%;
+    text-align: left;
+    font-size: 24px;
+  }
+
+  #hero-section {
+    width: 80%;
+    flex-direction: row-reverse;
+    text-align: left;
+  }
+
+  #hero-text {
+    width: 60%;
+  }
+
+  #hero-text h1 {
+    margin: 0;
+    font-size: 40px;
+  }
+
+  #hero-text p {
+    padding-right: 100px;
+  }
+
+  #hero-image {
+    width: 40%;
+    min-height: 315px;
+  }
+
+  #collection-section,
+  #review-section {
+    width: 75%;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  #cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+  }
+
+  .card + .card {
+    margin-top: 0;
+  }
+
+  .review-blog {
+    flex-direction: row;
+    padding: 50px 30px;
+  }
+
+  .customer-image {
+    width: 30%;
+  }
+
+  .customer-details {
+    width: 70%;
+    padding-left: 50px;
+  }
+
+  .customer-name,
+  .customer-designation,
+  .customer-review {
+    text-align: left;
+  }
+
+  .footer-title {
+    font-size: 24px;
+  }
+}
+
+/* -----------------------------
+    desktop design
+-------------------------------- */
+@media (min-width: 1441px) {
+  #hero-section {
+    margin-top: 40px;
+  }
+
+  #hero-text h1 {
+    font-size: 52px;
+  }
+
+  #hero-text p {
+    width: 70%;
+    font-size: 18px;
+  }
+
+  #collection-section,
+  #review-section {
+    width: 70%;
+  }
+
+  #review-section {
+    margin-bottom: 100px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
 }
